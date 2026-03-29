@@ -17,6 +17,8 @@ add_library(General-Utils STATIC ${GENERAL_SRC})
 #    glm glew_s glfw OpenAL freetype
 #)
 
-target_include_directories(General-Utils PUBLIC 
-   src ${WHEREAMI_INCLUDE_DIR}
+
+target_include_directories(general_utils PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
+

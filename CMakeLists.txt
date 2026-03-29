@@ -6,12 +6,17 @@ project(General-Utils)
 
 include(Dependencies.cmake)
 
+file(GLOB GENERAL_SRC
+    src/*.cpp
+    ${whereami_SOURCE_DIR}/src/whereami.c
+)
+
 add_library(General-Utils STATIC ${GENERAL_SRC})
 
 #target_link_libraries(core PUBLIC 
 #    glm glew_s glfw OpenAL freetype
 #)
 
-#target_include_directories(core PUBLIC 
-#   src src/utility src/Threads src/Events vendor ${GLM_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${GLFW_INCLUDE_DIR} ${OPENALSOFT_INCLUDE_DIR} ${FREETYPE_INCLUDE_DIR} ${WHEREAMI_INCLUDE_DIR}
-#)
+target_include_directories(General-Utils PUBLIC 
+   src ${WHEREAMI_INCLUDE_DIR}
+)

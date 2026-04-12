@@ -10,4 +10,5 @@ struct FilePaths {
     std::string fontsPath = "../../app/fonts";
     std::string assetsPath = "../../app/assets";
     std::string corePath = "../../core";
+    std::string executablePath = getExecutablePath();
 };

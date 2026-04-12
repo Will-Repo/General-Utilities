@@ -9,6 +9,7 @@ class FilePaths {
         std::string srcPath = "../../app/src";
         std::string shadersPath = "../../app/shaders";
         std::string fontsPath = "../../app/fonts";
+        std::string assetsPath = "../../app/assets";
         std::string corePath = "../../core";
         const std::string executablePath = setExecutablePath();
 };
